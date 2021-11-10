@@ -8,13 +8,12 @@ public class FindFile {
 
     }
 
-    public static void main(String[] args) {
-        // System.out.println(directorySearch("file5.txt", new File("C:\\Temp")));
-    }
-
-    public void directorySearch(String target, String DIR_NAME) {
+    public void directorySearch(String target, String DIR_NAME) throws IllegalArgumentException {
         File path = new File(DIR_NAME); 
-        System.out.println("abs path: " + path.getAbsolutePath());
+        if(!path.exists()) {
+            throw new IllegalArgumentException();
+        }
+        // System.out.println("abs path: " + path.getAbsolutePath());
         if (path.isDirectory()) {
             for (File newFile : path.listFiles()) {
                 // System.out.println("abs path2: " + newFile.getAbsolutePath());

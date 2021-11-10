@@ -14,6 +14,10 @@ public class FindFileDriver {
 		doSearch("nosuchfile", DIR_NAME);
 		// Finds 3
 		doSearch("file3.txt", DIR_NAME);
+		// Finds 1
+		doSearch("file1.txt", DIR_NAME);
+		// Finds 1
+		doSearch("file1.txt","C:\\Temp\\NotADirectory");
 	}
 
 	/*
@@ -26,7 +30,8 @@ public class FindFileDriver {
 		try {
 			finder.directorySearch(target, dirName);
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("Please only enter a valid directory");
+			// System.out.println(e.getMessage());
 			System.out.println(finder.getFiles());
 			System.exit(0);
 		}
