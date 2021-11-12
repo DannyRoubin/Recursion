@@ -1,3 +1,10 @@
+/*
+Name: Danny Roubin
+Class: CSS 143 Sec B
+Assignment: Recursion assignment
+
+Purpose of this file/class is to perform both an iterative and a recursive search to perform a binary search
+*/
 public class BinarySearch extends SearchAlgorithm {
 
     @Override
@@ -25,7 +32,7 @@ public class BinarySearch extends SearchAlgorithm {
                 return mid;
             }
         }
-        throw new ItemNotFoundException("The item was not found");
+        throw new ItemNotFoundException("'" + target + "' not found");
 
     }
 
@@ -43,7 +50,7 @@ public class BinarySearch extends SearchAlgorithm {
         if (ListOfWords[mid].equals(target)) {
             return mid;
         } else if (left >= right ) {
-            throw new ItemNotFoundException("The word could not be found");
+            throw new ItemNotFoundException("'" + target + "' not found");
     
         } else if (target.compareTo(ListOfWords[mid]) > 0) {
             return recSearch(ListOfWords, target, mid + 1, right);
@@ -52,7 +59,7 @@ public class BinarySearch extends SearchAlgorithm {
             return recSearch(ListOfWords, target, left, mid - 1);
 
         }
-        throw new ItemNotFoundException("The word could not be found ");
+        throw new ItemNotFoundException("'" + target + "' not found");
 
     }
 
