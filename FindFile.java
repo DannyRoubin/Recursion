@@ -25,10 +25,6 @@ public class FindFile {
     // see if their name matches target name
     public void directorySearch(String target, String DIR_NAME) throws IllegalArgumentException {
         File path = new File(DIR_NAME); 
-        // if a non existent directory is passed in, throw exception
-        if(!path.exists()) {
-            throw new IllegalArgumentException("Please only provide a valid directory");
-        }
         // if the given path is a directory go down this route
         if (path.isDirectory()) {
             // for each loop that will go through run directory search on each file type in the directory
@@ -44,6 +40,10 @@ public class FindFile {
             files.add(path.getAbsolutePath());
                 count++;
             }
+        }
+        // if a non existent directory is passed in, throw exception
+        if(!path.exists()) {
+            throw new IllegalArgumentException("Please only provide a valid directory. No further files can be searched for. Comment out the illegal code in your driver to continue");
         }
     }
 
