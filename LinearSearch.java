@@ -1,3 +1,10 @@
+/*
+Name: Danny Roubin
+Class: CSS 143 Sec B
+Assignment: Recursion assignment
+
+Purpose of this file/class is to perform 
+*/
 public class LinearSearch extends SearchAlgorithm {
 
     @Override
@@ -18,7 +25,7 @@ public class LinearSearch extends SearchAlgorithm {
                     return i;
                 }
             }
-            throw new ItemNotFoundException("Word: '" + target + "' not found");
+            throw new ItemNotFoundException("'" + target + "' not found");
         }
     }
 

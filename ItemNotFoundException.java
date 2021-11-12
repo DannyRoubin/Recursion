@@ -1,11 +1,10 @@
-public class ItemNotFoundException extends RuntimeException {
-    String message;
+public class ItemNotFoundException extends Exception {
     public ItemNotFoundException() {
     }
+
     public ItemNotFoundException(String errorMsg) {
-        this.message = errorMsg;
+        super(errorMsg);
+
     }
-    public String getMessage() {
-        return message;
-    }
+
 }
