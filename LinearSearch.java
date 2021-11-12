@@ -36,7 +36,7 @@ public class LinearSearch extends SearchAlgorithm {
             return index;
         } else {
             incrementCount();
-            return recSearch(ListOfWords, target, index+1);
+            return recSearch(ListOfWords, target, index++);
 
         }
 
