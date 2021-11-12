@@ -7,9 +7,12 @@ Purpose of this file/class is to perform both an iterative and a recursive searc
 */
 public class BinarySearch extends SearchAlgorithm {
 
+    // Overriding the iterativeSearch
     @Override
     public int iterativeSearch(String[] ListOfWords, String target) throws ItemNotFoundException {
+        // calling resetCount() to reset the count
         resetCount();
+        // runs the iterative method named search
         return (Search(ListOfWords, target));
     }
 
