@@ -11,7 +11,7 @@ public class FindFile {
     public void directorySearch(String target, String DIR_NAME) throws IllegalArgumentException {
         File path = new File(DIR_NAME); 
         if(!path.exists()) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Please only provide a valid directory");
         }
         // System.out.println("abs path: " + path.getAbsolutePath());
         if (path.isDirectory()) {
