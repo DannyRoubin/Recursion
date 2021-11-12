@@ -39,7 +39,20 @@ public class BinarySearch extends SearchAlgorithm {
     private int recSearch(String[] ListOfWords, String target, int left, int right) throws ItemNotFoundException {
         incrementCount();
         int mid = ((left + right)/2);
-        
+
+        if (ListOfWords[mid].equals(target)) {
+            return mid;
+        } else if (left >= right ) {
+            throw new ItemNotFoundException("The word could not be found");
+    
+        } else if (target.compareTo(ListOfWords[mid]) > 0) {
+            return recSearch(ListOfWords, target, mid + 1, right);
+
+        } else if (target.compareTo(ListOfWords[mid]) < 0) {
+            return recSearch(ListOfWords, target, left, mid - 1);
+
+        }
+        throw new ItemNotFoundException("The word could not be found ");
 
     }
 
