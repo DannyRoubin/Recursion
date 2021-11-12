@@ -19,7 +19,7 @@ import java.util.Scanner;
 
 public class BinSearchDriver {
 
-	public final static String FILE_AND_PATH = "C:/Users/lkalm/EclipseWorkspace/Homework/src/Recursion/longwords.txt";
+	public final static String FILE_AND_PATH = "C:\\Users\\Danny\\Desktop\\UWB\\CS\\CSS143\\Recursion\\longwords.txt";
 	/* 
 	 * TODO: Be sure to change the FILE_AND_PATH to point to your local 
 	 * copy of longwords.txt or a FileNotFoundException will result
