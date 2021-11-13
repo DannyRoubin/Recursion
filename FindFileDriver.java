@@ -37,16 +37,23 @@ public class FindFileDriver {
 
 		System.out.println(" \nTarget: " + target);
 		try {
+			// tries to run directory search
 			finder.directorySearch(target, dirName);
 		} catch (Exception e) {
+			// if we catch an error print the message and see how many files we got added into the array
 			System.out.println(e.getMessage());
 			System.out.println(finder.getFiles());
+			// READ ME: Okay so here's the deal, if you want to test a non existent directory, make sure you are making that your
+			// last test since the line under this one will do a systemExit on error.
 			System.exit(0);
 		}
 
+		// if the count is equal to 0, then we found nothing 
 		if (finder.getCount() == 0)
+		// puts out the message we found nothing
 			System.out.println(target + " not found");
 		else {
+			// otherwise we ended up finding files and we can return the count and the array holding locations of the files
 			System.out.println("Count = " + finder.getCount());
 			System.out.println("files found at " + finder.getFiles());		
 		}

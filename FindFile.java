@@ -43,7 +43,7 @@ public class FindFile {
         }
         // if a non existent directory is passed in, throw exception
         if(!path.exists()) {
-            throw new IllegalArgumentException("Please only provide a valid directory. No further files can be searched for. Comment out the illegal code in your driver to continue");
+            throw new IllegalArgumentException("Please only provide a valid directory");
         }
     }
 
